@@ -13,3 +13,8 @@ https://github.com/LPD-iOS/LPDMvvmKit
 资料合集
 https://github.com/onmyway133/fantastic-ios-animation
 https://github.com/PoisonousMilk/TimLiu-iOS
+
+
+图片裁剪、相册浏览<br>
+https://github.com/longitachi/ZLPhotoBrowser<br>
+https://github.com/yackle/CLImageEditor
