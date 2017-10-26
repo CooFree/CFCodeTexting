@@ -18,3 +18,16 @@ https://github.com/PoisonousMilk/TimLiu-iOS
 图片裁剪、相册浏览<br>
 https://github.com/longitachi/ZLPhotoBrowser<br>
 https://github.com/yackle/CLImageEditor
+
+
+# 代码小片段
+
+##### 1.键盘透明
+```
+textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+```
+
+##### 2.状态栏的网络活动风火轮是否旋转
+```
+[UIApplication sharedApplication].networkActivityIndicatorVisible，默认值是NO。
+```
