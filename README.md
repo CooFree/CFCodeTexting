@@ -58,3 +58,4 @@ NSMutableParagraphStyle   *paragraphStyle   = [[NSMutableParagraphStyle alloc] i
 [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [dLabelString length])];  
 [dLabel setAttributedText:attributedString];  
 ```
+
