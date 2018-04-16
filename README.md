@@ -59,3 +59,19 @@ NSMutableParagraphStyle   *paragraphStyle   = [[NSMutableParagraphStyle alloc] i
 [dLabel setAttributedText:attributedString];  
 ```
 
+##### 4.跳转storyBoard
+```
+   1.获取第一个视图storyBoard
+    /* 加载名为storyboardName的Storyboard */
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    
+    /* 获取storyboard的InitialViewController 即根控制器*/
+    FirstViewController *vc = [storyboard instantiateInitialViewController];
+    其中UIViewController可以根据当前视图进行替换，替换成StoryBoard对应的视图类，然后选择跳转方式
+    2.获取第二个视图storyboard的某个视图控制器的时候使用
+     SecondViewController *VC= [storyboard instantiateViewControllerWithIdentifier:@"NewVC”];(这个过程需要在StoryBoard中设置目标视图的Custom Class和StoryBoard ID)
+    //跳转事件的实现
+    在第一个视图添加按钮跳转到第二个视图
+    [self.navigationController pushViewController:VC animated:YES];(第一个视图是带有导航栏的)
+```
+
