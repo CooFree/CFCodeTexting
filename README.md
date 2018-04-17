@@ -9,6 +9,8 @@ https://github.com/521xueweihan/HelloGitHub
 MVVM框架
 https://github.com/LPD-iOS/LPDMvvmKit
 
+打包framework的正确姿势
+https://www.jianshu.com/p/ef5a888e57f2?from=timeline&isappinstalled=0
 
 资料合集
 https://github.com/onmyway133/fantastic-ios-animation
