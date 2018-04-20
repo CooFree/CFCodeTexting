@@ -1,8 +1,9 @@
 # CFCodeTexting
 
 
-关于git使用  
+###### 关于git使用  
 https://blog.csdn.net/qq_32531823/article/details/53259822
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758392816224cafd33c44b4451887cc941e6716805c000
 ```
 提交代码到服务器后发现git clone下来的有些目录是空的。
 查看服务器的目录果然是空的。看本季git add .    后查看git  status 
