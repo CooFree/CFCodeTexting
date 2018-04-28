@@ -1,4 +1,6 @@
 #### vue学习问题
+资料
+https://github.com/vuejs/awesome-vue
 
 1.在vue项目中关闭ESLint方法：<br>
 找到build文件夹--->webpack.base.conf.js---->module
