@@ -89,8 +89,23 @@ NSMutableParagraphStyle   *paragraphStyle   = [[NSMutableParagraphStyle alloc] i
     在第一个视图添加按钮跳转到第二个视图
     [self.navigationController pushViewController:VC animated:YES];(第一个视图是带有导航栏的)
 ```
-5.用代码使程序转向设置页面：
+##### 5.用代码使程序转向设置页面：
 ```
 NSURL *url=[NSURL URLWithString:@"prefs:root=WIFI"];//转向->"设置wifi"页面
 [[UIApplication sharedApplication] openURL:url];
+```
+##### 6.系统判断
+```
+#define isOperatingSystemAtLeastVersion(majorVersion, minorVersion, patchVersion)[[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion: (NSOperatingSystemVersion) {
+    majorVersion,
+    minorVersion,
+    patchVersion
+}]
+
+if (isOperatingSystemAtLeastVersion(11, 0, 0)) {
+    //using new API
+} else {
+    //using deprecated API
+}
+
 ```
