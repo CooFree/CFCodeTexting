@@ -110,3 +110,20 @@ if (isOperatingSystemAtLeastVersion(11, 0, 0)) {
 }
 
 ```
+
+##### 7. web Cookies 每次退出应用都被清除解决方法( 用于实现自动登录 )https://www.jianshu.com/p/19a053e37c53
+```
+NSHTTPCookieStorage* cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray<NSHTTPCookie *> *cookies = [cookieStorage cookiesForURL:[NSURL URLWithString:baseUrl]];
+    NSMutableArray<NSDictionary *> *propertiesList = [[NSMutableArray alloc] init];
+    [cookies enumerateObjectsUsingBlock:^(NSHTTPCookie * _Nonnull cookie, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSMutableDictionary *properties = [[cookie properties] mutableCopy];
+        //将cookie过期时间设置为一年后
+        NSDate *expiresDate = [NSDate dateWithTimeIntervalSinceNow:3600*24*30*12];
+        properties[NSHTTPCookieExpires] = expiresDate;
+        //下面一行是关键,删除Cookies的discard字段，应用退出，会话结束的时候继续保留Cookies
+        [properties removeObjectForKey:NSHTTPCookieDiscard];
+         //重新设置改动后的Cookies
+        [cookieStorage setCookie:[NSHTTPCookie cookieWithProperties:properties]];
+    }];
+```
